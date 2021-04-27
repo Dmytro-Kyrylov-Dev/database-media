@@ -5,7 +5,10 @@ import './App.css';
 function App() {
   return (
     <Router>
-      {renderRoutes()}
+      <div className="body">
+        {renderRoutes()}  
+      </div>
+      
     </Router>
   );
 }
