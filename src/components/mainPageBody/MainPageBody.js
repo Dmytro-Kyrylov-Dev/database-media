@@ -1,6 +1,5 @@
 import React from 'react';
-import './main.css';
-import '../../pages/main/main.css';
+import './mainPageBody.css';
 import movieImg from '../../assets/movie.jpg';
 import tvImg from '../../assets/tv.jpg';
 import { Link } from 'react-router-dom';
