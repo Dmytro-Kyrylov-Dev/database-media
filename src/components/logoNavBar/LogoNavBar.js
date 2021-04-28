@@ -1,5 +1,5 @@
 import React from 'react';
-import './main.css';
+import './logoNavBar.css';
 
 class LogoNavBar extends React.Component {
     render () {
