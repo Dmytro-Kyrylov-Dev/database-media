@@ -1,14 +1,29 @@
+import React from 'react';
+import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import renderRoutes from './routes';
-import './App.css';
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+import movieAndTvReducer from './store/reducers/index';
+
+const middleware = [thunk];
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(
+  movieAndTvReducer,
+  composeEnhancers(applyMiddleware(...middleware))
+)
 
 function App() {
   return (
-    <Router>
-      <div className="body">
-        {renderRoutes()}  
-      </div>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <div className="body">
+          {renderRoutes()}  
+        </div>
+      </Router>
+    </Provider>
   );
 }
 

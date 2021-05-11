@@ -1,3 +1,3 @@
-import ListMovie from './ListMovie';
+import ListMovieContainer from './ListMovieContainer';
 
-export default ListMovie;
+export default ListMovieContainer;
