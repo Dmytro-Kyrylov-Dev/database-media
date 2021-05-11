@@ -1,3 +1,3 @@
-import ListTvShow from './ListTvShow';
+import ListTvShowContainer from './ListTvShowContainer';
 
-export default ListTvShow;
+export default ListTvShowContainer;
