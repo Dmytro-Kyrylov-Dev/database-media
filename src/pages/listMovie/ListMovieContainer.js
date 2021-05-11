@@ -9,7 +9,6 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getUpdatedListMovie: () => {
-    console.log('test');
     dispatch(moviesAndTvActions.getListMovies());
   },
 });

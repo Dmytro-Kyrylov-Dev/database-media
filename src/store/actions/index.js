@@ -9,7 +9,6 @@ const LIST_TV_SHOW_API_URL = 'https://api.themoviedb.org/3/tv/popular?api_key=a2
 export function getListMovies() {
     return async (dispatch) => {
         const listMovies = await (await fetch(LIST_MOVIES_API_URL)).json();
-        console.log('listMovies222', listMovies);
 
         dispatch({
             type: GET_LIST_MOVIES,
@@ -23,8 +22,7 @@ export function getListMovies() {
 export function getListTvShow() {
     return async (dispatch) => {
         const listTvShow = await (await fetch(LIST_TV_SHOW_API_URL)).json();
-        console.log('listTV222', listTvShow);
-
+       
         dispatch({
             type: GET_LIST_TV_SHOW,
             payload: {
