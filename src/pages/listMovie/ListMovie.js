@@ -11,13 +11,15 @@ class ListMovie extends React.Component {
         let posterIMG = 'https://image.tmdb.org/t/p/w500';
         const showMovies = this.props.updatedListMovie.map(movie => (
             <div className="mediaContainerMainMovie" key={movie.id}>
-                <div className="mediaContainerMovie">
-                    <img alt="" src={posterIMG + movie.poster_path} className="poster"/>
-                    <div className="mediaContainerMovieInfo">
-                        <h3>{movie.original_title}<br/>({movie.title})</h3>
-                        <p>Rating IMDb: {movie.vote_average}</p>
+                <Link to={`/movies/${movie.id}`}>
+                    <div className="mediaContainerMovie">
+                        <img alt="" src={posterIMG + movie.poster_path} className="poster"/>
+                        <div className="mediaContainerMovieInfo">
+                            <h3>{movie.original_title}<br/>({movie.title})</h3>
+                            <p>Rating IMDb: {movie.vote_average}</p>
+                        </div>
                     </div>
-                </div>
+                </Link>
             </div>
         ));
 
