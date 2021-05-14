@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './listTvShow.css';
+import FiltersBlock from '../../components/filtersBlock';
 
 class ListTvShow extends React.Component {
     
@@ -30,6 +31,7 @@ class ListTvShow extends React.Component {
             <div>
                 <Link className="buttonMain" to="/">Main</Link>
                 <br/>
+                <FiltersBlock />
                 <br/>
                 {showTvShow}      
             </div>
