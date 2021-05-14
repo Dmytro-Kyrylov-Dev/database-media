@@ -12,15 +12,17 @@ class ListTvShow extends React.Component {
         let posterIMG = 'https://image.tmdb.org/t/p/w500';
         const showTvShow = this.props.updatedListTvShow.map(tvshow => (
             <div className="mediaContainerMainTv" key={tvshow.id}>
-                <div className="mediaContainerTv">
-                    <div>
-                         <img alt="" src={posterIMG + tvshow.backdrop_path} className="posterTv"/>
-                    </div>
-                    <div className="mediaContainerTvInfo">
-                        <h3>{tvshow.original_name}<br/>({tvshow.name})</h3>
-                        <p>Rating IMDb: {tvshow.vote_average}</p>    
-                    </div>
-                </div>
+                <Link to={`/tv-shows/${tvshow.id}`}>
+                    <div className="mediaContainerTv">
+                        <div>
+                            <img alt="" src={posterIMG + tvshow.backdrop_path} className="posterTv"/>
+                        </div>
+                        <div className="mediaContainerTvInfo">
+                            <h3>{tvshow.original_name}<br/>({tvshow.name})</h3>
+                            <p>Rating IMDb: {tvshow.vote_average}</p>    
+                        </div>
+                    </div>    
+                </Link>
             </div>
         ));
 
