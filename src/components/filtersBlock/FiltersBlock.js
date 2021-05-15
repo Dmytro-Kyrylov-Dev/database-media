@@ -15,7 +15,7 @@ class FiltersBlock extends React.Component {
                 </div>
                 <div className="filtersBox">
                     <input type="search" id="search" name="search" placeholder="Find"></input>
-                    <input type="submit" value="Submit"></input>
+                    <button type="button">Start search</button>
                 </div>
             </div> 
         )
