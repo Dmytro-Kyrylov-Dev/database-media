@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './listMovie.css';
+import FiltersBlock from '../../components/filtersBlock';
 
 class ListMovie extends React.Component {
     componentDidMount() {
@@ -27,6 +28,7 @@ class ListMovie extends React.Component {
             <div>
                 <Link className="buttonMain" to="/">Main</Link>
                 <br/>
+                <FiltersBlock />
                 <br/>
                 {showMovies} 
             </div>

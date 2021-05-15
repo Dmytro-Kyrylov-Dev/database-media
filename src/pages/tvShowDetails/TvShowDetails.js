@@ -14,7 +14,7 @@ class TvShowDetails extends React.Component {
         return (
             <div className="tvShowPageStyle">
                 <img alt="" src={posterIMG + singleTvShowDetails.poster_path} className="poster"/>
-                <h3>{singleTvShowDetails.original_name} ({singleTvShowDetails.title})</h3>
+                <h3>{singleTvShowDetails.original_name} ({singleTvShowDetails.original_name})</h3>
                 <p>{singleTvShowDetails.release_date}</p>
                 <p>Rating IMDb: {singleTvShowDetails.vote_average}</p>
                 <p>{singleTvShowDetails.overview}</p>

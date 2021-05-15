@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.filtersMain {
+    height: 50px;
+    background-color:rgb(35, 60, 61);
+    color: cyan;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
