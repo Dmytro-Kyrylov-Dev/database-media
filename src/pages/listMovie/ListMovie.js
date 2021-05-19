@@ -4,8 +4,27 @@ import './listMovie.css';
 import FiltersBlock from '../../components/filtersBlock';
 
 class ListMovie extends React.Component {
+    
     componentDidMount() {
         this.props.getUpdatedListMovie();
+    }
+
+    handleFilterChange = (value) => {
+        switch (value) {
+            case 'popular':
+                this.props.getListPopularMovies();
+                break;
+            case 'topRating':
+                this.props.getListTopRatedMovies();
+                break;
+            case 'boxOfficeNow':
+                this.props.getListNowPlayingMovies();
+                break;
+        }
+    }
+
+    handleSearch = (query) => {
+        this.props.searchMovie(query);
     }
 
     render () {
@@ -28,7 +47,10 @@ class ListMovie extends React.Component {
             <div>
                 <Link className="buttonMain" to="/">Main</Link>
                 <br/>
-                <FiltersBlock />
+                <FiltersBlock 
+                    handleFilterChange={this.handleFilterChange}
+                    handleSearch={this.handleSearch}
+                />
                 <br/>
                 {showMovies} 
             </div>

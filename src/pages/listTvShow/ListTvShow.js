@@ -9,6 +9,24 @@ class ListTvShow extends React.Component {
         this.props.getUpdatedListTvShow();
     }
 
+    handleFilterChange = (value) => {
+        switch (value) {
+            case 'popular':
+                this.props.getListPopularTvShow();
+                break;
+            case 'topRating':
+                this.props.getListTopRatedTvShow();
+                break;
+            case 'boxOfficeNow':
+                this.props.getListAiringTodayTvShow();
+                break;
+        }
+    }
+
+    handleSearch = (query) => {
+        this.props.searchTvShow(query);
+    }
+
     render () {
         let posterIMG = 'https://image.tmdb.org/t/p/w500';
         const showTvShow = this.props.updatedListTvShow.map(tvshow => (
@@ -31,7 +49,10 @@ class ListTvShow extends React.Component {
             <div>
                 <Link className="buttonMain" to="/">Main</Link>
                 <br/>
-                <FiltersBlock />
+                <FiltersBlock 
+                    handleFilterChange={this.handleFilterChange}
+                    handleSearch={this.handleSearch}
+                />
                 <br/>
                 {showTvShow}      
             </div>
