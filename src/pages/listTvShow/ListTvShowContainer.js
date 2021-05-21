@@ -11,8 +11,19 @@ const mapDispatchToProps = (dispatch) => ({
   getUpdatedListTvShow: () => {
     dispatch(moviesAndTvActions.getListTvShow());
   },
+  getListPopularTvShow: () => {
+    dispatch(moviesAndTvActions.getListPopularTvShow());
+  },
+  getListTopRatedTvShow: () => {
+    dispatch(moviesAndTvActions.getListTopRatedTvShow());
+  },
+  getListAiringTodayTvShow: () => {
+    dispatch(moviesAndTvActions.getListAiringTodayTvShow());
+  },
+  searchTvShow: (query) => {
+    dispatch(moviesAndTvActions.searchTvShow(query));
+  },
 });
-
 
 export default connect(
   mapStateToProps,
